@@ -40,6 +40,7 @@ Here is a list of software I'll have on the machine, organised roughly as they w
   - unrar (and additionally unrar-free, not entirely sure of the difference but whatever...)
   - grsync (note: eventually I'll need to learn how to use rsync period, to be able to synch via ssh...)
   - kitty (some weird terminal with funky capabilities such as tabbing and splitting, not entirely sure how to use it but it looks cool)
+  - MidnightCommander (aka mc, because Thunar, XFCE's file manager, is nice but lacks a double panel option...)
 
 - Graphics
   - darktable
@@ -99,11 +100,22 @@ Conky is very nice to display stuff on the desktop background but it can quickly
 
 The config file is in ~/.config/conky/conky.conf there are a lot of places on the web to get information about that but I find this page http://conky.sourceforge.net/variables.html very usefull as it describes all objects/options one can use in the config file.
 
-As I am now using `cmus` to listen to music on espresso I wanted to add that on conky as well but there is no straight out of the box way to make them interact (as opposed to mpd which is very well supported) so I used a bash script using `cmus-remote` which is a commandline thing that lets you interact with cmus (weird as cmus is already in a terminal somewhere but whatever...) with the -Q option one can get a bunch of information and then it's a matter of parsing it to create a nice string to ship to conky via $execi. It's all in the script file in the config folder (together with the credit where I got the script before adapting it).
+As I am now using `cmus` to listen to music on espresso I wanted to add that on conky as well but there is no straight out of the box way to make them interact (as opposed to mpd which is very well supported) so I used a bash script using `cmus-remote` which is a commandline thing that lets you interact with cmus (weird as `cmus` is already in a terminal somewhere but whatever...) with the *-Q* option one can get a bunch of information and then it's a matter of parsing it to create a nice string to ship to conky via *$execi*. It's all in the script file in the config folder (together with the credit where I got the script before adapting it).
 
 The weather forecast is coming via `curl` from http://wttr.in/YourTown which is just amazing.
 
 The last thing to do is to have conky start on login, which I did with no magic but the Settings->Session&Startup menu in XFCE... 
 
 ## OK, Vim it is now.
-TBD
+So vim is pretty much mandatory around here. I cannot even begin to understand how to live without vim. I won't get into the vim vs. emacs war as I never used emacs in my entire life, not once. So I cannot say anything about that. I installed vim with `apt install vim-gtk3` NOT because I wanted gvim which is an aberation but because I wanted vim to be installed with python3 support and that's the only way I found to do it.
+
+The first thing is to create a .vimrc file and make that to one's liking. Which can be anything from one line to add numbers on the side to a shitload of things. And then I read a bunch of stuff about how to turn vim into a python IDE and learned a few funky stuff along the way. First of all there is a nice plugin manager which is called Vundle and can get pulled into your machine via github... https://github.com/VundleVim/Vundle.vim 
+
+It is done like `git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim` as explained. And then there is a bunch of things to add to .vimrc which is also explained.
+
+Here is the list of plugins I added (undoubtedly it will grow):
+- NERDTree (to have a file tree on the side of vim)
+- SimpylFold (to fold code functions, classes, loops, etc.)
+- indentpython (for proper PEP8 indentation, not a vundle thingy though, it comes from https://github.com/vim-scripts/indentpython.vim)
+
+The .vimrc is in the config folder here.
