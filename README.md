@@ -29,7 +29,7 @@ Next thing is to install KeepassXC to recover the .kdbx file with all the passwo
 ## A bunch of stuff to do things...
 Here is a list of software I'll have on the machine, organised roughly as they would be in the menu (plus the ones in terminal shoved into the list, yes there shall be a "diverse" category, there is always one...)
 
-- Accessories
+- Accessories (aka Diverse!)
   - db browser for SQLite
   - gnomedisks (I haven't found anything other than this for the moment)
   - KeepassXC
@@ -39,6 +39,7 @@ Here is a list of software I'll have on the machine, organised roughly as they w
   - orpie (a NP calculator in terminal!)
   - unrar (and additionally unrar-free, not entirely sure of the difference but whatever...)
   - grsync (note: eventually I'll need to learn how to use rsync period, to be able to synch via ssh...)
+  - kitty (some weird terminal with funky capabilities such as tabbing and splitting, not entirely sure how to use it but it looks cool)
 
 - Graphics
   - darktable
@@ -78,9 +79,20 @@ Here is a list of software I'll have on the machine, organised roughly as they w
   - Python (2 and 3, comes with the box... but as it is the obsession of the moment there'll be a section for that.)
   - Pycharm (my main IDE at the moment, it was a bit tricky so there'll be a section for it, in the python section.)
  
- I may have forgotten some stuff. That'll get update from time to time.
+ I may have forgotten some stuff. That'll get updated from time to time.
 
  Oh, and of course I play a bit of nerdy games from time to time: Stone Soup Crawl (just `apt install crawl`) and Dwarf Fortress. For emulation purposes Higan is nice and covers pretty much all the retrogaming needs. There may be a little bit of info on DosBox and Ultima IV and V at some point later.
+
+- Stuff that at some point was used...
+  - Geeqie (Image browser of some sort)
+  - RawTherapee (darktable equivalent)
+  - Audacity (to manipulate sound files)
+  - mplayer (competitor for VLC)
+  - Arduino (directly from apt as the one taken from the website did some weird stuff when I tried to install it...)
+  - GPXSee (app to see stuff coming from GPS tracks... It seems to be broken in apt at the moment)
+  - Keybase + Telegram
+  - Etcher (app to flash iso to USB sticks, as an AppImage (not opensource) https://www.balena.io/etcher/)
+  - Atom (IDE)
 
 ## Now let's make a nice looking conky!
 TBD
