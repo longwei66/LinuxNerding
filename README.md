@@ -95,4 +95,15 @@ Here is a list of software I'll have on the machine, organised roughly as they w
   - Atom (IDE)
 
 ## Now let's make a nice looking conky!
+Conky is very nice to display stuff on the desktop background but it can quickly become a time vortex where one disappears trying to add this or that nice feature... Anyhow, first `apt install conky-all` to have all the possibilities installed.
+
+The config file is in ~/.config/conky/conky.conf there are a lot of places on the web to get information about that but I find this page http://conky.sourceforge.net/variables.html very usefull as it describes all objects/options one can use in the config file.
+
+As I am now using `cmus` to listen to music on espresso I wanted to add that on conky as well but there is no straight out of the box way to make them interact (as opposed to mpd which is very well supported) so I used a bash script using `cmus-remote` which is a commandline thing that lets you interact with cmus (weird as cmus is already in a terminal somewhere but whatever...) with the -Q option one can get a bunch of information and then it's a matter of parsing it to create a nice string to ship to conky via $execi. It's all in the script file in the config folder (together with the credit where I got the script before adapting it).
+
+The weather forecast is coming via `curl` from http://wttr.in/YourTown which is just amazing.
+
+The last thing to do is to have conky start on login, which I did with no magic but the Settings->Session&Startup menu in XFCE... 
+
+## OK, Vim it is now.
 TBD
