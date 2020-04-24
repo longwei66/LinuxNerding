@@ -18,17 +18,18 @@ ALBUM=$( cmus-remote -Q 2>/dev/null | grep " album " | cut -d " " -f 3- )
 WHERE=$( cmus-remote -Q 2>/dev/null | grep position | cut -d " " -f 2- )
 TOTAL=$( cmus-remote -Q 2>/dev/null | grep duration | cut -d " " -f 2- )
 
-WHERE_MIN=$(( $WHERE / 60 ))
-WHERE_SEC=$(( $WHERE % 60 ))
-TOTAL_MIN=$(( $TOTAL / 60 ))
-TOTAL_SEC=$(( $TOTAL % 60 ))
-
-WHERE_SEC=$(printf "%02d" $WHERE_SEC)
-TOTAL_SEC=$(printf "%02d" $TOTAL_SEC)
 
 if [ -z "$ARTIST" ];
 then
-    echo "Nothing..."
+    echo "Nothing playing now..."
 else
+    WHERE_MIN=$(( $WHERE / 60 ))
+    WHERE_SEC=$(( $WHERE % 60 ))
+    TOTAL_MIN=$(( $TOTAL / 60 ))
+    TOTAL_SEC=$(( $TOTAL % 60 ))
+
+    WHERE_SEC=$(printf "%02d" $WHERE_SEC)
+    TOTAL_SEC=$(printf "%02d" $TOTAL_SEC)
+
     echo "artist: $ARTIST\nalbum: $ALBUM\ntitle: $TITLE ($WHERE_MIN:$WHERE_SEC/$TOTAL_MIN:$TOTAL_SEC)"
 fi
