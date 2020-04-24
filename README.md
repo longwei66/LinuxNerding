@@ -119,3 +119,40 @@ Here is the list of plugins I added (undoubtedly it will grow):
 - indentpython (for proper PEP8 indentation, not a vundle thingy though, it comes from https://github.com/vim-scripts/indentpython.vim)
 
 The .vimrc is in the config folder here.
+
+## Python stuff
+So python2 and python3 come preinstalled on debian. Nothing to worry about here. In terms of IDE I fancy myself using a combination of proper vim and terminals but, well, I got almost bullied into using a dedicated IDE. For some time I used `atom` but it crashed on me on the last *espresso* and I didn't bother fixing it as I was told to have a go at `pycharm`. So I reinstalled pycharm on the ne *espresso*.
+
+Pycharm lives here: https://www.jetbrains.com/help/pycharm/installation-guide.html#standalone and I followed the stand-alone install so I have the startup script in my /opt/ which is nice but I want to have it in XFCE's menu as well. The answer to that is to create a `pycharm.desktop` in the folder ~/.local/share/applications/. Here is how it looks:
+```
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Pycharm
+Comment=Python dedicated IDE
+Icon=/opt/pycharm-community-2020.1/bin/pycharm.svg
+Exec=/opt/pycharm-community-2020.1/bin/pycharm.sh
+Terminal=false
+StartupNotify=false
+Categories=Development;IDE;
+```
+Then of course one has to make sure it's been `chmod 644` in order to have it readable. Then Pycharm will be available in the Menu under Development...
+
+Next thing is to install `pip` as it is said to be the good way to install packages/modules/libraries in python, whenever possible. I followed the official https://pip.pypa.io/en/stable/installing/ and this tutorial https://gist.github.com/saurabhshri/46e4069164b87a708b39d947e4527298 to get it installed locally. Of course one has to use `python3` instead of `python` to get `pip3`. Then as all is installed in ~/.local/bin one has to add that to the $PATH, which turned out to be tricky...
+
+I tried to create a .bash_profile file with `export PATH="$PATH:~/.local/bin"` in but without sourcing it it wouldn't load it at start-up. This became really annoying after a good bunch of reading things here and there about the proper way to things. Well, the proper way to do it was this way but it still doesn't work so I resorted to add said-line at the end of .bashrc instead which solved it but it is NOT satisfactory let me tell you that!
+
+
+Then I wanted to try my new pip3 and install Tkinter to get back to what I was doing before this sudden urge to reinstall *espresso* and, well, I had to install it with a good old `apt install python3-tk` because Tkinter is not in pip. Go figure.
+
+Note: there is no need to install anything to have the virtual environment working as it is packaged inside python3 now.
+
+## What next?
+Well, that's it for now... 
+In the can:
+- maybe some log about git and how to have it running properly.
+- keep that thing updated when there are changes in some config or other, list of plugins and shit.
+
+See ya around,
+yrs trly,
+h42
