@@ -145,7 +145,7 @@ I tried to create a .bash_profile file with `export PATH="$PATH:~/.local/bin"` i
 
 Then I wanted to try my new pip3 and install Tkinter to get back to what I was doing before this sudden urge to reinstall *espresso* and, well, I had to install it with a good old `apt install python3-tk` because Tkinter is not in pip. Go figure.
 
-Note: there is no need to install anything to have the virtual environment working as it is packaged inside python3 now.
+And lastly, `apt install python3-venv` to use virtual environments because it seems that it is the proper way to do things. I'm into proper ways to do things at the moment.
 
 ## What next?
 Well, that's it for now... 
